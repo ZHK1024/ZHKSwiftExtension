@@ -3,9 +3,4 @@ use_frameworks!
 target 'ZHKSwiftExtension_Example' do
   pod 'ZHKSwiftExtension', :path => '../'
 
-  target 'ZHKSwiftExtension_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

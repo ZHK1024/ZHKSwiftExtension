@@ -11,7 +11,7 @@ import UIKit
 
 extension UIFont {
     
-    class func pingfang(_ size: CGFloat) -> UIFont {
+    public class func pingfang(_ size: CGFloat) -> UIFont {
         return UIFont(name: "PingFangSC-Medium", size: size)!
     }
 }

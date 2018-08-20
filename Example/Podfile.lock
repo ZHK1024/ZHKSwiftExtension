@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZHKSwiftExtension: 9fbfaeab956a5acf97399d839f5c3fbf6ee34e6a
+  ZHKSwiftExtension: dbafe40f47b1961daad1ac392e08ada646841f1d
 
-PODFILE CHECKSUM: aba178182fcbc347613c464ca8af8db829d6ca5b
+PODFILE CHECKSUM: 3d5362b29666f54c84899baa842719b209ccebad
 
 COCOAPODS: 1.2.1.beta.1

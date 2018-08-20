@@ -11,27 +11,27 @@ import UIKit
 
 extension UIScreen {
     
-    class func bounds() -> CGRect {
+    public class func bounds() -> CGRect {
         return UIScreen.main.bounds
     }
     
-    class func size() -> CGSize {
+    public class func size() -> CGSize {
         return bounds().size
     }
     
-    class func width() -> CGFloat {
+    public class func width() -> CGFloat {
         return size().width
     }
     
-    class func height() -> CGFloat {
+    public class func height() -> CGFloat {
         return size().height
     }
     
-    class func scaleX() -> CGFloat {
+    public class func scaleX() -> CGFloat {
         return width() / 375.0
     }
     
-    class func scaleY() -> CGFloat {
+    public class func scaleY() -> CGFloat {
         return height() / 667.0
     }
 }
