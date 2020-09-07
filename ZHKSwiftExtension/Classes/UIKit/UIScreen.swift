@@ -1,5 +1,5 @@
 //
-//  UIScreen+Extension.swift
+//  UIScreen.swift
 //  ZHKSwiftExtension
 //
 //  Created by ZHK on 2018/8/20.
@@ -8,30 +8,11 @@
 
 import UIKit
 
-
 extension UIScreen {
     
-    public class func bounds() -> CGRect {
-        return UIScreen.main.bounds
-    }
-    
-    public class func size() -> CGSize {
-        return bounds().size
-    }
-    
-    public class func width() -> CGFloat {
-        return size().width
-    }
-    
-    public class func height() -> CGFloat {
-        return size().height
-    }
-    
-    public class func scaleX() -> CGFloat {
-        return width() / 375.0
-    }
-    
-    public class func scaleY() -> CGFloat {
-        return height() / 667.0
-    }
+    public static var width: CGFloat { size.width }
+
+    public static var height: CGFloat { size.height }
+
+    public static var size: CGSize { main.bounds.size }
 }
