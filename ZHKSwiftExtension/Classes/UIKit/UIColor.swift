@@ -16,7 +16,7 @@ extension UIColor {
     ///   - greeb: 绿
     ///   - blue:  蓝
     /// - Returns: UIColor 对象
-    static func rgb(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
+    public static func rgb(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
         .rgba(red, green, blue, 1)
     }
     
@@ -27,12 +27,12 @@ extension UIColor {
     ///   - blue:  蓝
     ///   - alpha: 不透明度
     /// - Returns: UIColor 对象
-    static func rgba(_ red: CGFloat, _ greeb: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> UIColor {
+    public static func rgba(_ red: CGFloat, _ greeb: CGFloat, _ blue: CGFloat, _ alpha: CGFloat) -> UIColor {
         UIColor(red: red / 255.0, green: greeb / 255.0, blue: blue / 255.0, alpha: alpha)
     }
     
     /// 随机颜色
-    static var random: UIColor {
+    public static var random: UIColor {
         .init(red: CGFloat.random(in: 0.0...1.0),
               green: CGFloat.random(in: 0.0...1.0),
               blue: CGFloat.random(in: 0.0...1.0),

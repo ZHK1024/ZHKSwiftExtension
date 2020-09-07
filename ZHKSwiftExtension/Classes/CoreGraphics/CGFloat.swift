@@ -35,7 +35,7 @@ extension CGFloat {
     public static let float23 = 23.0 * CGFloat.scaleX
     public static let float24 = 24.0 * CGFloat.scaleX
     
-    static var statusBarHeight: CGFloat {
+    public static var statusBarHeight: CGFloat {
         UIApplication.shared.statusBarFrame.height
     }
 }
@@ -43,12 +43,12 @@ extension CGFloat {
 extension CGFloat {
     
     /// 改为屏幕宽度 (width) 比例缩放后的结果
-    var xfix: CGFloat {
+    public var xfix: CGFloat {
         self * .scaleX
     }
     
     /// 改为屏幕高度 (height) 比例缩放后的结果
-    var yfix: CGFloat {
+    public var yfix: CGFloat {
         self * .scaleY
     }
     
@@ -58,12 +58,12 @@ extension CGFloat {
 extension Double {
     
     /// 改为屏幕宽度 (width) 比例缩放后的结果
-    var xfix: CGFloat {
+    public var xfix: CGFloat {
         CGFloat(self) * CGFloat.scaleX
     }
     
     /// 改为屏幕高度 (height) 比例缩放后的结果
-    var yfix: CGFloat {
+    public var yfix: CGFloat {
         CGFloat(self) * CGFloat.scaleY
     }
 }

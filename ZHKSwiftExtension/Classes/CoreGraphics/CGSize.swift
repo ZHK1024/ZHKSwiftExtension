@@ -11,13 +11,13 @@ import Foundation
 
 extension CGSize {
     
-    static var screen: CGSize { UIScreen.main.bounds.size }
+    public static var screen: CGSize { UIScreen.main.bounds.size }
     
-    static func all(_ size: CGFloat) -> CGSize {
+    public static func all(_ size: CGFloat) -> CGSize {
         CGSize(width: size, height: size)
     }
     
-    var half: CGSize {
+    public var half: CGSize {
         CGSize(width: width / 2, height: height / 2)
     }
 }
