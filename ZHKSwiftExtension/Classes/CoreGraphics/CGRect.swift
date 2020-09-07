@@ -20,15 +20,15 @@ extension CGRect {
         get { origin.y }
     }
     
-    public var width: CGFloat {
-        set { size = CGSize(width: newValue, height: height) }
-        get { size.width }
-    }
-    
-    public var height: CGFloat {
-        set { size = CGSize(width: width, height: newValue) }
-        get { size.height }
-    }
+//    public var width: CGFloat {
+//        set { size = CGSize(width: newValue, height: height) }
+//        get { size.width }
+//    }
+//
+//    public var height: CGFloat {
+//        set { size = CGSize(width: width, height: newValue) }
+//        get { size.height }
+//    }
 }
 
 // Init
