@@ -28,7 +28,7 @@
 		88C46ACE3E5FBCD8E03812B3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8F4E209402F81B31DEFA03FD /* Pods-ZHKSwiftExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHKSwiftExtension_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZHKSwiftExtension_Tests/Pods-ZHKSwiftExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4BE894A7FC0FECA7959BF1B /* Pods_ZHKSwiftExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHKSwiftExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7352C748FBF03282304BD94 /* ZHKSwiftExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZHKSwiftExtension.podspec; path = ../ZHKSwiftExtension.podspec; sourceTree = "<group>"; };
+		B7352C748FBF03282304BD94 /* ZHKSwiftExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZHKSwiftExtension.podspec; path = ../ZHKSwiftExtension.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BB18B6DDD733906837C3CA7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D4978EDD75D34C4EA14E8ED1 /* Pods-ZHKSwiftExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZHKSwiftExtension_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZHKSwiftExtension_Example/Pods-ZHKSwiftExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D4BB188C05799976D24DD2C0 /* Pods_ZHKSwiftExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZHKSwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +129,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				CA8F636C65E402746609C90E /* [CP] Embed Pods Frameworks */,
-				1F0887E9565185A9A68A3CCD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +161,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -189,34 +189,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F0887E9565185A9A68A3CCD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZHKSwiftExtension_Example/Pods-ZHKSwiftExtension_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B1CE60FECF587F14B4AE0F1D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZHKSwiftExtension_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CA8F636C65E402746609C90E /* [CP] Embed Pods Frameworks */ = {
@@ -225,13 +213,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZHKSwiftExtension_Example/Pods-ZHKSwiftExtension_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ZHKSwiftExtension/ZHKSwiftExtension.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZHKSwiftExtension.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZHKSwiftExtension_Example/Pods-ZHKSwiftExtension_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZHKSwiftExtension_Example/Pods-ZHKSwiftExtension_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
