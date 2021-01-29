@@ -10,6 +10,16 @@ import UIKit
 
 extension UIEdgeInsets {
     
+    /// The sum of horizontal spacing
+    public var shSpacing: CGFloat {
+        return left + right
+    }
+    
+    /// The sum of vertical spacing
+    public var svSpacing: CGFloat {
+        return top + bottom
+    }
+    
     public static func all(_ value: CGFloat) -> UIEdgeInsets  {
         UIEdgeInsets(top: value, left: value, bottom: value, right: value)
     }
