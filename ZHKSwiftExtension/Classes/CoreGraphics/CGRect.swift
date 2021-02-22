@@ -6,7 +6,7 @@
 //  
 //
 
-import Foundation
+import UIKit
 
 extension CGRect {
     
@@ -31,7 +31,53 @@ extension CGRect {
 //    }
 }
 
-// Init
+/// 重组 (Recombine)
+extension CGRect {
+    
+    /// 使用新的 x 值重组 CGRect
+    /// - Parameter x: x 值
+    /// - Returns: 新 CGRect
+    public func rec(x: CGFloat) -> CGRect {
+        CGRect(x: x , y: y, width: width, height: height)
+    }
+    
+    /// 使用新的 x 值重组 CGRect
+    /// - Parameter x: x 值
+    /// - Returns: 新 CGRect
+    public func rec(y: CGFloat) -> CGRect {
+        CGRect(x: x , y: y, width: width, height: height)
+    }
+    
+    /// 使用新的 width 值重组 CGRect
+    /// - Parameter width: width 值
+    /// - Returns: 新 CGRect
+    public func rec(width: CGFloat) -> CGRect {
+        CGRect(x: x , y: y, width: width, height: height)
+    }
+    
+    /// 使用新的 height 值重组 CGRect
+    /// - Parameter height: height 值
+    /// - Returns: 新 CGRect
+    public func rec(height: CGFloat) -> CGRect {
+        CGRect(x: x , y: y, width: width, height: height)
+    }
+    
+    /// 使用新的 origin 值重组 CGRect
+    /// - Parameter origin: origin 值
+    /// - Returns: 新 CGRect
+    public func rec(origin: CGPoint) -> CGRect {
+        CGRect(x: origin.x , y: origin.y, width: width, height: height)
+    }
+    
+    /// 使用新的 size 值重组 CGRect
+    /// - Parameter size: size 值
+    /// - Returns: 新 CGRect
+    public func rec(size: CGSize) -> CGRect {
+        CGRect(x: x , y: y, width: size.width, height: size.height)
+    }
+}
+
+// Read
 extension CGRect {
     
     /// UIScreen.main.bounds
