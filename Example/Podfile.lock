@@ -1,5 +1,5 @@
 PODS:
-  - ZHKSwiftExtension (0.2.2)
+  - ZHKSwiftExtension (0.2.3)
 
 DEPENDENCIES:
   - ZHKSwiftExtension (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZHKSwiftExtension: 0a66e63489d164970b734aa1d016c7bc31b5d8da
+  ZHKSwiftExtension: e9358a852ea15ebd6c52fb3ccee15a3d00ccf102
 
 PODFILE CHECKSUM: e9089ff67167fc225a8a2d1b6eee62ec54b75b93
 
