@@ -68,3 +68,11 @@ extension Double {
     }
 }
 
+extension CGFloat {
+    
+    /// 屏幕宽度
+    public static var screenWidth: CGFloat { UIScreen.main.bounds.width }
+    
+    /// 屏幕高度
+    public static var screenHeight: CGFloat { UIScreen.main.bounds.height }
+}
