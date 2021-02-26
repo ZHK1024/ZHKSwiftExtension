@@ -52,6 +52,10 @@ extension CGFloat {
         self * .scaleY
     }
     
+    /// 屏幕像素对齐
+    public var flat: CGFloat {
+        ceil(self * UIScreen.main.scale) / UIScreen.main.scale
+    }
 }
 
 /// 常数 (3.0) 被判定为 Double, 因此 Double 也添加了此扩展
@@ -65,6 +69,11 @@ extension Double {
     /// 改为屏幕高度 (height) 比例缩放后的结果
     public var yfix: CGFloat {
         CGFloat(self) * CGFloat.scaleY
+    }
+    
+    /// 屏幕像素对齐
+    public var flat: CGFloat {
+        ceil(CGFloat(self) * UIScreen.main.scale) / UIScreen.main.scale
     }
 }
 
